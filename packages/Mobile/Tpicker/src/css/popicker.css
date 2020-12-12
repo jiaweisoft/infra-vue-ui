@@ -1,0 +1,216 @@
+html,body {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+body {
+  position: relative;
+}
+.popicker-box * {
+  margin: 0;
+  padding: 0;
+}
+
+.popicker-box {
+  position: fixed;
+  width: 7.1rem;
+  z-index: 9;
+  height: 260px;
+  overflow: hidden;
+  font-size: 10px;
+  background: #FFFFFF;
+  display: none;
+  margin: 0.2rem;
+  padding: 0;
+  border-radius:0.26rem;
+  text-align: center;
+}
+
+.popicker-box.bottom {
+  bottom: 0px;
+}
+
+.popicker-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  background: #000000;
+  opacity: 0.4;
+  display: none;
+  margin: 0;
+  padding: 0;
+  z-index: 8;
+}
+
+.popicker-content {
+  position: relative;
+  width: 100%;
+  height: 215px;
+  overflow: hidden;
+  z-index: 9;
+}
+
+.popicker-col {
+  float: left;
+  box-sizing: border-box;
+  position: relative;
+  transition: 0.1s
+}
+
+.popicker-col-1 {
+  width: 100%;
+}
+
+.popicker-col-2 {
+  width: 50%;
+}
+
+.popicker-col-3 {
+  width: 33.3333%;
+}
+
+.popicker-item {
+  width: 100%;
+  line-height: 32px;
+  text-align: center;
+  height: 32px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #dbdcde;
+  transition: .2s;
+  text-indent: 0;
+  user-select: none;
+}
+
+.popicker-item.popicker-selected {
+  font-size: 0.42rem;
+  font-size: 21px;
+  height: 45px;
+  line-height: 45px;
+  color: #6392FE;
+}
+
+.popicker-item.popicker-selected-second {
+  font-size: 0.38rem;
+  font-size: 19px;
+  color: #9a9da5;
+}
+
+.popicker-item.popicker-selected-third {
+  font-size: 0.3rem;
+  font-size: 15px;
+  color: #dbdcde;
+}
+
+.popicker-baseline {
+  width: 100%;
+  height: 45px;
+  position: absolute;
+  z-index: 1;
+  border-top: 1px rgba(70,85,130,0.15) solid;
+  border-bottom: 1px rgba(70,85,130,0.15) solid;
+  top: 129px;
+}
+
+.popicker-header {
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  float: left;
+  background: #FFFFFF;
+  border-bottom:1px solid rgba(70,85,130,0.15);
+}
+
+.popicker-cancel,
+.popicker-confirm {
+  line-height: 45px;
+  font-size: 0.36rem;
+  font-size: 18px;
+  width: 33%;
+  display: inline-block;
+}
+
+.popicker-cancel {
+  color: #465582;
+  float: left;
+}
+
+.popicker-confirm {
+  color: #6392FE;
+  float: right;
+}
+
+
+.animated {
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+.fadeOutDown {
+  -webkit-animation-name: fadeOutDown;
+  animation-name: fadeOutDown;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
